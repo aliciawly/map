@@ -54,7 +54,7 @@
       "scale": {
         "type": "threshold",
         "domain": [0.05, 0.15, 0.25, 0.50],
-        "range": ["#cbd1d4", "#adbac0", "#4aacc1", "#2192c0"]
+        "range": ["#b1ebb1", "#82cec2", "#51b2cd", "#288abd"]
         },
         "legend": {
             "titleFontSize": 16,  
@@ -64,8 +64,8 @@
         },
         "tooltip": [
           {"field": "properties.name", "type": "nominal", "title": "State"},
-          {"field": "GDP per Capita", "type": "quantitative", "title": "GDP per Capita","format": ".2f"},
-          {"field": "Population", "type": "quantitative", "title": "Population","format": ".0f"}
+          {"field": "Population", "type": "quantitative", "title": "Population","format": ".0f"},
+          {"field": "GDP per Capita", "type": "quantitative", "title": "GDP per Capita","format": ".2f"}
     ]
       }
     }
