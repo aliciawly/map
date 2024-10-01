@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1000,
+  "height": 500,
+  "title": {"text": "Economic Activity in 2024", "fontSize":20},
+  "data": {
+    "url": "https://raw.githubusercontent.com/aliciawly/map/refs/heads/main/data/EconomicActivity.csv"
+  },
+  "params": [
+    {
+      "name": "Quarter_selection",
+      "value": "2024Q1",
+      "bind": {
+        "input": "select",
+        "options": ["2024Q1", "2024Q2"],
+        "name": "Select Quarter: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "datum[Quarter_selection]", 
+      "as": "percentage"
+    },
+    {
+      "calculate": "datum.percentage + '%'", 
+      "as": "percentageWithSymbol"
+    }
+  ],
+  "encoding": {
+    "theta": {
+      "field": "percentage",
+      "type": "quantitative",
+      "stack": true,
+      "title": "Percentage",
+      "sort": "descending"
+    },
+    "color": {
+      "field": "Kind of Economic Activity",
+      "title": "Economic Activity Type",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "#8da0cb",
+          "#fc8d62",
+          "#a6d854",
+          "#66c2a5",
+          "#e5c494",
+          "#b3b3b3"
+        ]
+      },
+      "legend": {
+            "titleFontSize": 12,  
+            "labelFontSize": 12,  
+            "symbolSize": 200     
+          }
+    }, 
+    "tooltip": [
+      {"field": "Kind of Economic Activity", "type": "nominal", "title": "Activity Type"},
+      {"field": "percentageWithSymbol", "type": "nominal", "title": "Percentage"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+          "type": "arc",
+          "innerRadius": 180,
+          "outerRadius": 110,
+          "stroke": "white",
+          "strokeWidth": 2,
+          "cursor": "pointer"
+      }
+    },
+    {
+      "mark": {
+          "type": "text",
+          "align": "center",
+          "outerRadius": 205,
+          "fontSize": 14
+      },
+      "encoding": {
+        "text": {
+          "field": "percentageWithSymbol",
+          "type": "nominal"
+        }
+      }
+    }
+    
+  ]
+}

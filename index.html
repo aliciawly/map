@@ -12,16 +12,30 @@
 
 </head>
 <body>
-  
-<div id="choropleth_map"></div>
+<div id="container_Map">
+  <div id="choropleth_map"></div>
+  <script type="text/javascript">
 
-<script type="text/javascript">
+    var spec2 = "js/choropleth_map.vg.json";
+    vegaEmbed('#choropleth_map', spec2).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+</div>
 
-  var spec2 = "js/choropleth_map.vg.json";
-  vegaEmbed('#choropleth_map', spec2).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+<div id="container_PieChart">
+    <!-- Chart container -->
+    <div id="pie_chart"></div>
+  <script type="text/javascript">
+
+    var spec3 = "js/pieChart.json";
+    vegaEmbed('#pie_chart', spec3).then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      const inflation = document.getElementById("inflation-select");
+
+    }).catch(console.error);
+  </script>
+</div>
 
 </body>
 </html>

@@ -57,8 +57,8 @@
         "range": ["#b1ebb1", "#82cec2", "#51b2cd", "#288abd"]
         },
         "legend": {
-            "titleFontSize": 16,  
-            "labelFontSize": 16,  
+            "titleFontSize": 12,  
+            "labelFontSize": 12,  
             "symbolSize": 200     
           }
         },
