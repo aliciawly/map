@@ -41,7 +41,7 @@
       "type": "nominal",
       "scale": {
         "range": [
-          "#8da0cb",
+          "#8da0cb",  
           "#fc8d62",
           "#a6d854",
           "#66c2a5",
@@ -50,11 +50,11 @@
         ]
       },
       "legend": {
-            "titleFontSize": 12,  
-            "labelFontSize": 12,  
-            "symbolSize": 200     
-          }
-    }, 
+        "titleFontSize": 12,  
+        "labelFontSize": 12,  
+        "symbolSize": 200
+      }
+    },
     "tooltip": [
       {"field": "Kind of Economic Activity", "type": "nominal", "title": "Activity Type"},
       {"field": "percentageWithSymbol", "type": "nominal", "title": "Percentage"}
@@ -63,20 +63,20 @@
   "layer": [
     {
       "mark": {
-          "type": "arc",
-          "innerRadius": 180,
-          "outerRadius": 110,
-          "stroke": "white",
-          "strokeWidth": 2,
-          "cursor": "pointer"
+        "type": "arc",
+        "innerRadius": 180,
+        "outerRadius": 110,
+        "stroke": "white",
+        "strokeWidth": 2,
+        "cursor": "pointer"
       }
     },
     {
       "mark": {
-          "type": "text",
-          "align": "center",
-          "outerRadius": 205,
-          "fontSize": 14
+        "type": "text",
+        "align": "center",
+        "outerRadius": 205,
+        "fontSize": 14
       },
       "encoding": {
         "text": {
@@ -84,7 +84,72 @@
           "type": "nominal"
         }
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 800,
+        "y": 400,
+        "fill": "#fc8d62",
+        "fontSize": 15,
+        "text": "Construction"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 890,
+        "y": 400,
+        "fill": "black",
+        "fontSize": 15,
+        "text": "increased"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 800,
+        "y": 420,
+        "fill": "black",
+        "fontSize": 15,
+        "text": "from"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 835,
+        "y": 420,
+        "fill": "#fc8d62",
+        "fontSize": 15,
+        "text": "11.9%"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 883,
+        "y": 420,
+        "fill": "black",
+        "fontSize": 15,
+        "text": "to"
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "x": 900,
+        "y": 420,
+        "fill": "#fc8d62",
+        "fontSize": 15,
+        "text": "17.2%"
+      }
     }
-    
   ]
 }
